@@ -1,0 +1,22 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Set count: @currentCount  </p>
+
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@inject IJSRuntime JS
+@inject ILocalStorageService localStorage
+@code {
+    private int currentCount = 0;
+    private string Count;
+    private async Task IncrementCount()
+    {
+        currentCount++;
+    }
+
+}
